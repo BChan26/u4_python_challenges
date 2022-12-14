@@ -8,16 +8,50 @@
 # -  We're on the right track here, how many seconds are in a day
 # - How many Hours are in the month of June? 
 # - How many Minutes are in the month of August?
- 
- 
+
  # Bonus -> Without singing the old showtune in your head, how many Minutes are there in a year? 
  # In days, in weeks, in cups of coffee?
 
 
 # ---------------------------------
 #      Solution Goes Here ->
-# ---------------------------------
 
+# - First, lets create a function that converts Minutes to Seconds (1 ->60, 5 -> 300)
+def minutes_to_seconds(value):
+    conversion = value * 60
+    # print(conversion)
+    return conversion
+minutes_to_seconds(2)
+
+# -  Then take it up a step further, converting Hours into seconds (1 -> 3600)
+def hours_to_seconds(value):
+    conversion = value * 60 * 60
+    # print(conversion)
+    return conversion
+hours_to_seconds(1)
+
+# -  We're on the right track here, how many seconds are in a day
+def days_to_seconds(value): 
+    conversion = value * 24 * 60 * 60
+    # print(conversion)
+    return conversion
+days_to_seconds(2)
+
+# - How many Hours are in the month of June? 
+def hours_in_june(value):
+    conversion = value * 30 * 24 
+    # print(conversion)
+    return conversion
+hours_in_june(1)
+
+# - How many Minutes are in the month of August?
+def minutes_in_august(value):
+    conversion = value * 31 * 24 * 60
+    # print(conversion)
+    return conversion
+minutes_in_august(1)
+
+# ---------------------------------
 
 
 #  2) Middle letter
@@ -28,6 +62,14 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+def mid(value): 
+    if len(value) % 2 == 0:
+        print("")
+        return ""
+    if len(value) % 2 == 1:
+        print(value[int((len(value) / 2) - 0.5)])
+        return value[int((len(value) / 2) - 0.5)]
+# mid("tea")
 # ---------------------------------
 
 
@@ -37,6 +79,13 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+def covert(insert):
+    count = len(insert) - 4
+    endcap = insert[-4:]
+    synthesis = "*"*count + endcap
+    print(synthesis)
+#From Alvin
+
 # ---------------------------------
 
 
@@ -63,6 +112,21 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+def online_count(my_dict):
+    count=0
+    for i in my_dict.values():
+        if i == "online":
+            count+=1
+    return count 
+
+my_dict = {"Tyler":"online",
+            "Justin":"online",
+            "Lorenzo":"online",
+            "Jack" : "online"}
+            
+ans = online_count(my_dict)            
+print(ans)
+#From Tyler
 # ---------------------------------
 
 
@@ -73,6 +137,12 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+def discount(price, off):
+    percent = off/100
+    amt_discount = percent * price
+    savings = price - amt_discount
+    print(savings)
+    #From Jason
 # ---------------------------------
 
 
@@ -84,6 +154,11 @@
 
 # ---------------------------------
 #      Solution Goes Here ->
+import math
+def pythagorean(num1, num2):
+    return (math.sqrt((num1**2)+(num2**2)))
+print(pythagorean(3,3))
+#From Devon
 # ---------------------------------
 
 
